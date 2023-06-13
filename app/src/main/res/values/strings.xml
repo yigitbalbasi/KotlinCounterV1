@@ -1,0 +1,13 @@
+<resources>
+    <string name="app_name">KotlinCounterV1</string>
+    <string name="app_start_header">Zikirmatik</string>
+    <string name="app_start_enter_number">Kaç kere okuyacaksınız?</string>
+    <string name="kaydet_button_text">Kaydet</string>
+    <!-- TODO: Remove or change this placeholder text -->
+    <string name="buttonArttir_text">+</string>
+
+    <string name="buttonAzalt_text">-</string>
+    <string name="close_button_text">X</string>
+    <string name="reset_button_text">Sıfırla</string>
+
+</resources>
