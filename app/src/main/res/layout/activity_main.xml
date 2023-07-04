@@ -27,14 +27,14 @@
         android:id="@+id/numberInputText"
         android:layout_width="409dp"
         android:layout_height="100dp"
-        android:layout_marginTop="80dp"
+        android:layout_marginBottom="80dp"
         android:hint="@string/app_start_enter_number"
         android:inputType="number"
         android:textSize="36sp"
         android:textStyle="bold"
+        app:layout_constraintBottom_toTopOf="@+id/buttonKaydet"
         app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-        app:layout_constraintTop_toBottomOf="@+id/appStartHeader">
+        app:layout_constraintStart_toStartOf="parent">
 
 
     </EditText>
@@ -51,18 +51,6 @@
         app:layout_constraintEnd_toEndOf="parent"
         app:layout_constraintHorizontal_bias="0.5"
         app:layout_constraintStart_toStartOf="parent" />
-
-    <Spinner
-        android:id="@+id/spinner"
-        android:layout_width="409dp"
-        android:layout_height="100dp"
-        android:layout_marginStart="1dp"
-        android:layout_marginTop="60dp"
-        android:layout_marginEnd="1dp"
-        app:layout_constraintEnd_toEndOf="parent"
-        app:layout_constraintStart_toStartOf="parent"
-
-        app:layout_constraintTop_toBottomOf="@+id/numberInputText" />
 
 
 </androidx.constraintlayout.widget.ConstraintLayout>

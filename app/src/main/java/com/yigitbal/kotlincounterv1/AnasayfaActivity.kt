@@ -27,10 +27,9 @@ class AnasayfaActivity : AppCompatActivity() {
 
         val kalanMiktarEditText = findViewById<TextView>(R.id.kalanMiktarText)
         val okunanMiktarEditText = findViewById<TextView>(R.id.okunanMiktarText)
-        val okunanSureEditText = findViewById<TextView>(R.id.okunanSureTextView)
         val builder = AlertDialog.Builder(this)
 
-       // final MediaPlayer mediaPlayer =
+
 
 
         val gelenSayi = intent.getStringExtra("Sayi")
@@ -41,14 +40,6 @@ class AnasayfaActivity : AppCompatActivity() {
 
         kalanMiktarEditText.text = "Kalan: $kalanSayi"
         okunanMiktarEditText.text = "0"
-
-        val okunacakSure = intent.getStringExtra("Sure")
-        if (okunacakSure == "Sure seçin") {
-            okunanSureEditText.visibility = View.INVISIBLE
-            //görünmez yap
-        } else {
-            okunanSureEditText.text = okunacakSure
-        }
 
 
         val manager = getSystemService(Context.NOTIFICATION_SERVICE) as NotificationManager
@@ -89,7 +80,7 @@ class AnasayfaActivity : AppCompatActivity() {
                             )
                         )
                         Log.e("titresim", "uzun")
-                        builder.setTitle("Bitti. Farklı zikir çekmek ister misiniz??")
+                        builder.setTitle("Bitti. Başka zikir çekmek ister misiniz??")
 
                         builder.setPositiveButton("Evet") { dialog, which ->
                             val intent = Intent(this, MainActivity::class.java)
@@ -114,12 +105,11 @@ class AnasayfaActivity : AppCompatActivity() {
 
         val buttonAzalt = findViewById<Button>(R.id.buttonAzalt)
         buttonAzalt.setOnClickListener {
-            if (kalanSayi != 0) {
+            if (okunanSayi != 0) {
                 kalanSayi = kalanSayi + 1
                 okunanSayi = okunanSayi - 1
             } else {
-                kalanSayi = kalanSayi + 1
-                okunanSayi = okunanSayi - 1
+                Toast.makeText(this,"Sıfırlandı",Toast.LENGTH_SHORT).show()
 
 
             }

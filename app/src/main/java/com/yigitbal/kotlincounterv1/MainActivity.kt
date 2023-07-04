@@ -14,10 +14,10 @@ import androidx.appcompat.app.AppCompatActivity
 
 class MainActivity : AppCompatActivity() {
 
-    private lateinit var spinner: Spinner
+    //private lateinit var spinner: Spinner
     private lateinit var editText: EditText
     private lateinit var sayi: String
-    private lateinit var okunacakSure: String
+
 
 
     override fun onCreate(savedInstanceState: Bundle?) {
@@ -29,7 +29,7 @@ class MainActivity : AppCompatActivity() {
         editText = findViewById(R.id.numberInputText)
 
 
-
+/*
         val hashMap: HashMap<Int, String> = HashMap() //define empty hashmap
         hashMap[0] = "Sure seçin"
         hashMap[1] = "Ayetel Kürsi"
@@ -95,7 +95,7 @@ class MainActivity : AppCompatActivity() {
                     .show()
             }
         }
-
+*/
         val buttonClick = findViewById<Button>(R.id.buttonKaydet)
 
         buttonClick.setOnClickListener {
@@ -115,7 +115,6 @@ class MainActivity : AppCompatActivity() {
                     val intent = Intent(this, AnasayfaActivity::class.java)
 
                     intent.putExtra("Sayi", sayi)
-                    intent.putExtra("Sure", okunacakSure)
                     startActivity(intent)
                 }
             }
